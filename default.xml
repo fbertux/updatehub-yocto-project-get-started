@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://git.yoctoproject.org/git/" name="yocto" sync-j="4"/>
+  <remote fetch="https://code.ossystems.com.br" name="ossystems" sync-j="4" review="code.ossystems.com.br"/>
+  <remote fetch="http://git.openembedded.org" name="oe" sync-j="4"/>
+  <remote fetch="https://github.com" name="github" sync-j="4"/>
+
+  <default revision="invalidRevision"/>
+
+  <!-- Open Embedded Layers -->
+  <project remote="oe" revision="1.44" name="bitbake" path="sources/bitbake"/>
+  <project remote="oe" revision="zeus" name="openembedded-core" path="sources/openembedded-core"/>
+  <project remote="oe" revision="zeus" name="meta-openembedded" path="sources/meta-openembedded"/>
+
+  <!-- OS Systems Layers -->
+  <project remote="ossystems" revision="zeus" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
+  <project remote="ossystems" revision="zeus" name="ossystems-yocto-base-scripts" path="sources/base">
+    <copyfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+  <!-- UpdateHub Layers and platform -->
+  <project remote="github" revision="zeus" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
+  <project remote="github" revision="master" name="fbertux/updatehub-yocto-project-get-started" path="sources/platform"/>
+
+  <!-- UpdateHub support for Raspberry Pi BSP -->
+  <project remote="yocto"  revision="zeus" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+  <project remote="github" revision="zeus" name="UpdateHub/meta-updatehub-raspberrypi" path="sources/meta-updatehub-raspberrypi"/>
+</manifest>
