@@ -19,7 +19,8 @@
   </project>
 
   <!-- UpdateHub Layers and platform -->
-  <project remote="github" revision="dunfell" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
+  <project remote="github" revision="topic/rust" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
+  <project remote="github" revision="master" name="rust-embedded/meta-rust-bin" path="sources/meta-rust-bin"/>
   <project remote="github" revision="master" name="fbertux/updatehub-yocto-project-get-started" path="sources/platform"/>
 
   <!-- UpdateHub support for Raspberry Pi BSP -->
