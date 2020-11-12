@@ -8,21 +8,22 @@
   <default revision="invalidRevision"/>
 
   <!-- Open Embedded Layers -->
-  <project remote="oe" revision="1.44" name="bitbake" path="sources/bitbake"/>
-  <project remote="oe" revision="zeus" name="openembedded-core" path="sources/openembedded-core"/>
-  <project remote="oe" revision="zeus" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="1.46" name="bitbake" path="sources/bitbake"/>
+  <project remote="oe" revision="dunfell" name="openembedded-core" path="sources/openembedded-core"/>
+  <project remote="oe" revision="dunfell" name="meta-openembedded" path="sources/meta-openembedded"/>
 
   <!-- OS Systems Layers -->
-  <project remote="ossystems" revision="zeus" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
-  <project remote="ossystems" revision="zeus" name="ossystems-yocto-base-scripts" path="sources/base">
+  <project remote="ossystems" revision="dunfell" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
+  <project remote="ossystems" revision="dunfell" name="ossystems-yocto-base-scripts" path="sources/base">
     <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
   <!-- UpdateHub Layers and platform -->
-  <project remote="github" revision="zeus" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
+  <project remote="github" revision="topic/rust" name="UpdateHub/meta-updatehub" path="sources/meta-updatehub"/>
+  <project remote="github" revision="master" name="rust-embedded/meta-rust-bin" path="sources/meta-rust-bin"/>
   <project remote="github" revision="master" name="fbertux/updatehub-yocto-project-get-started" path="sources/platform"/>
 
   <!-- UpdateHub support for Raspberry Pi BSP -->
-  <project remote="yocto"  revision="zeus" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
-  <project remote="github" revision="zeus" name="UpdateHub/meta-updatehub-raspberrypi" path="sources/meta-updatehub-raspberrypi"/>
+  <project remote="yocto"  revision="dunfell" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+  <project remote="github" revision="dunfell" name="UpdateHub/meta-updatehub-raspberrypi" path="sources/meta-updatehub-raspberrypi"/>
 </manifest>
